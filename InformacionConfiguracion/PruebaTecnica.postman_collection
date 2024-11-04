@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "0259a4aa-3bba-4e6d-a567-fedc43aafeb9",
+		"name": "PRO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10647558"
+	},
+	"item": [
+		{
+			"name": "ClienteEnpoint",
+			"item": [
+				{
+					"name": "createCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1234\",\r\n    \"estado\": true,\r\n    \"persona\": {\r\n        \"nombre\": \"Jose Lena\",\r\n        \"genero\": \"Masculino\",\r\n        \"edad\": 27,\r\n        \"identificacion\": \"1100099\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-clientes/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-clientes",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllClientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ms-clientes/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-clientes",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClienteById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-clientes/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-clientes",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"1234\",\r\n    \"estado\": true,\r\n    \"persona\": {\r\n        \"nombre\": \"Jose Lena\",\r\n        \"genero\": \"Masculino\",\r\n        \"edad\": 27,\r\n        \"identificacion\": \"1100099\",\r\n        \"direccion\": \"Otavalo sn y principal\",\r\n        \"telefono\": \"098254785\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-clientes/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-clientes",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-clientes/clientes/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-clientes",
+								"clientes",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cuenta",
+			"item": [
+				{
+					"name": "crearCuenta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"585545\",\r\n    \"tipoCuenta\": \"Corriente\",\r\n    \"saldoInicial\": 1000.0,\r\n    \"estado\": true,\r\n    \"cliente\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerCuentas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/cuentas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"cuentas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerCuentaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/cuentas/585545",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"cuentas",
+								"585545"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarCuenta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"numeroCuenta\": \"123456789\",\r\n    \"tipoCuenta\": \"Ahorros\",\r\n    \"saldoInicial\": 2560.0,\r\n    \"estado\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/cuentas/123456789",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"cuentas",
+								"123456789"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Movimiento",
+			"item": [
+				{
+					"name": "crearMovimiento",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2024-11-04T08:10:00.000+00:00\",\r\n  \"tipoMovimiento\": \"Retiro\",\r\n  \"valor\": -300.00,\r\n  \"numeroCuenta\": \"585545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMovimientos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/movimientos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"movimientos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtenerMovimientoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/movimientos/585545/2024-11-04T08:10:00.000+00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"movimientos",
+								"585545",
+								"2024-11-04T08:10:00.000+00:00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualizarMovimiento",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"tipoMovimiento\": \"Deposito\",\r\n  \"valor\": 90.00,\r\n  \"saldo\": 90.00,\r\n  \"numeroCuenta\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/movimientos/123456789/2024-11-02T00:00:00.000+00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"movimientos",
+								"123456789",
+								"2024-11-02T00:00:00.000+00:00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:9090/ms-cuenta-movimiento/reportes?cliente=1&fechaInicio=2024-11-01&fechaFin=2024-11-30",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/ms-cuenta-movimiento/reportes?cliente=1&fechaInicio=2024-11-01&fechaFin=2024-11-30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"ms-cuenta-movimiento",
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "cliente",
+									"value": "1"
+								},
+								{
+									"key": "fechaInicio",
+									"value": "2024-11-01"
+								},
+								{
+									"key": "fechaFin",
+									"value": "2024-11-30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
